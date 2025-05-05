@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  breaklines=true,
+  showstringspaces=false
+}
+
+
+\definecolor{highlight}{RGB}{255, 255, 0}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% Logos
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/epnLogo.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/FIS_logo.jpg}
+\end{minipage}
+
+\vspace{0.5cm}
+
+% Títulos principales
+\begin{center}
+    \textbf{ESCUELA POLITÉCNICA NACIONAL}\\[0.2cm]
+    \textbf{FACULTAD DE INGENIERÍA DE SISTEMAS}\\[0.2cm]
+    \textbf{INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN}
+\end{center}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+% Datos principales
+\noindent\textbf{PERÍODO ACADÉMICO:} 2025-A\\[0.2cm]
+\noindent\textbf{ASIGNATURA:} ICCD412 Métodos Numéricos \hfill \textbf{GRUPO:} GR2\\[0.2cm]
+\noindent\textbf{TIPO DE INSTRUMENTO:} Práctica2\\[0.2cm]
+\noindent\textbf{FECHA DE ENTREGA LÍMITE:} {04/05/2025}\\[0.2cm]
+\noindent\textbf{ALUMNO:} {Sebastián Chicaiza}
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+% Secciones
+\section*{TEMA}
+
+\begin{center}
+    \Large\textbf{Representación numérica 64 bits}
+\end{center}
+\vspace{0.5cm}
+
+\section*{OBJETIVOS}
+\begin{itemize}
+    \item {Comprender el procedimiento para la conversión de números en decimal a formato IEEE 754 de 64 bits.}
+    \item { Analizar el error relativo resultante de la conversión.}
+\end{itemize}
+\vspace{0.5cm}
+\section*{MARCO TEÓRICO}
+El estándar IEEE 754 define cómo representar números reales en computadoras usando formatos de punto flotante.
+Los tipos más comunes son float y double. El valor cero no puede representarse en formato normalizado, por lo que se usa un patrón especial de bits en ceros. También existe el -0, pero tanto 0 como -0 se consideran iguales al compararlos\cite{microsoftIEEE754}.
+
+El número representado en formato IEEE 754 de 64 bits esá dado por:
+\[x = (-1)^{Signo} \cdot (1+Mantisa) \cdot 2^{exponente - 1023}\]\cite{bui1999design}
+\vspace{0.5cm}
+
+\section*{DESARROLLO}
+
+Pasar el número \(263.3_{10}\) al formato IEEE 754 de 64 bits, una vez en binario pasarlo a decimal y calcular el error relativo a 3 cifras de redondeo.
+
+\subsection*{Transformación a IEE 754}
+Signo positivo (0)
+
+Conversión a binario:
+    
+    \[
+        \begin{aligned}
+            \frac{263}{2}  = residuo(1) \\
+            \frac{131}{2}  = residuo(1) \\
+            \frac{65}{2}  = residuo(1) \\
+            \frac{32}{2}  = residuo(0) \\
+            \frac{16}{2}  = residuo(0) \\
+            \frac{8}{2}  = residuo(0) \\
+            \frac{4}{2}  = residuo(0) \\
+            \frac{2}{2}  = residuo(0) \\
+            \frac{1}{2}  = residuo(1) \\
+            263_{10} = 100000111_2
+        \end{aligned}
+    \]
+
+    \[
+        \begin{aligned}
+            0.3 \cdot 2 &= parteEntera(0) \\
+            0.6 \cdot 2 &= parteEntera(1) \\
+            0.2 \cdot 2 &= parteEntera(0) \\
+            0.4 \cdot 2 &= parteEntera(0) \\
+            0.8 \cdot 2 &= parteEntera(1) \\
+            0.6 \cdot 2 &= parteEntera(1) \quad Se\quad repite\\
+            0.3_{10} &= 0.0\overline{1001}_2
+        \end{aligned}
+    \]
+
+\[ 263.3_{10} = 100000111.0\overline{1001}_2\]
+
+Mantisa normalizada:
+\[100000111.0\overline{1001}_2 = 1.000001110\overline{1001}_2 \cdot 2^{8}\]
+
+Mantisa:
+\[Mantisa = 000001110\overline{1001}_2\]
+Exponente: 
+\[Exponente_{Sesgado} = 1023 + exponenteReal\]
+\[Exponente_{Sesgado} = 1023 + 8 = 1031\]
+
+Conversión del Exponente:
+
+\[
+    \begin{aligned}
+        \frac{1031}{2}  = residuo(1) \\
+        \frac{515}{2}  = residuo(1) \\
+        \frac{257}{2}  = residuo(1) \\
+        \frac{128}{2}  = residuo(0) \\
+        \frac{64}{2}  = residuo(0) \\
+        \frac{32}{2}  = residuo(0) \\
+        \frac{16}{2}  = residuo(0) \\
+        \frac{8}{2}  = residuo(0) \\
+        \frac{4}{2}  = residuo(0) \\
+        \frac{2}{2}  = residuo(0) \\
+        \frac{1}{2}  = residuo(1) \\
+        1031_{10} = 10000000111_2
+    \end{aligned}
+\]
+
+Exponente en 11 bits:
+\[Exponente = 10000000111_2\]
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Signo} & \textbf{Exponente (11 bits)} & \textbf{Mantisa (52 bits)} \\ \hline
+    0 & 10000000111 & 0000011101001100110011001100110011001100110011001100 \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{Transformación a decimal}
+
+\[x = (-1)^{Signo} \cdot (1+Mantisa) \cdot 2^{exponente - 1023}\]
+\[x = (-1)^{0} \cdot (1+0.028515338897705078) \cdot 2^{1031 - 1023}\]
+\[x = 263.2999267578125 \]
+
+\subsection*{Cálculo de error relativo}
+\[p = 263.3 \quad \text{y} \quad p^{*} = 263.2999267578125\]
+\[
+\begin{aligned}
+    error_{relativo} &= \left| \frac{p - p^{*}}{p} \right|\\
+                     &= \left| \frac{263.3 - 263.2999267578125}{263.3} \right|\\
+                     &= 0.000000278170100688829 \approx 0.278 \cdot 10^{-6}
+\end{aligned}
+\]  
+\section*{CONCLUCIONES}
+\begin{itemize}
+    \item {La conversion a formato IEEE 754 de 64 bits permite representar una gran cantidad de valores con alta presición.}
+    \item {El resultado del cálculo del error relativo de la conversión demuestra la presición de este formato.} 
+\end{itemize}
+
+\section*{RECOMENDACIONES}
+
+Tener en cuenta el valor del error relativo al utilizar el formato IEEE 754 para representar números.
+Especialmente cuando se trata de resultados en el campo científico, donde se requiere de gran presición.
+\renewcommand{\refname}{\MakeUppercase{REFERENCIAS}}
+\bibliographystyle{IEEEtran}
+\bibliography{inFiles/References/references.bib}
+
+
+\end{document}

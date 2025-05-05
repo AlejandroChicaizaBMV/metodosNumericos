@@ -1,0 +1,388 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  breaklines=true,
+  showstringspaces=false
+}
+
+
+\definecolor{highlight}{RGB}{255, 255, 0}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% Logos
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/epnLogo.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/FIS_logo.jpg}
+\end{minipage}
+
+\vspace{0.5cm}
+
+% Títulos principales
+\begin{center}
+    \textbf{ESCUELA POLITÉCNICA NACIONAL}\\[0.2cm]
+    \textbf{FACULTAD DE INGENIERÍA DE SISTEMAS}\\[0.2cm]
+    \textbf{INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN}
+\end{center}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+% Datos principales
+\noindent\textbf{PERÍODO ACADÉMICO:} 2025-A\\[0.2cm]
+\noindent\textbf{ASIGNATURA:} ICCD412 Métodos Numéricos \hfill \textbf{GRUPO:} GR2\\[0.2cm]
+\noindent\textbf{TIPO DE INSTRUMENTO:} Práctica1\\[0.2cm]
+\noindent\textbf{FECHA DE ENTREGA LÍMITE:} {04/05/2025}\\[0.2cm]
+\noindent\textbf{ALUMNO:} {Sebastián Chicaiza}
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+% Secciones
+\section*{TEMA}
+
+\begin{center}
+    \Large\textbf{Tipos de Errores}
+\end{center}
+\vspace{0.5cm}
+
+\section*{OBJETIVOS}
+\begin{itemize}
+    \item {Identificar los tipos de errores junto con su significado.}
+    \item {Lograr resolver problemas con los diferentes tipos de errores.}
+\end{itemize}
+\vspace{0.5cm}
+\section*{MARCO TEÓRICO}
+
+Los errores númericos surgen del uso de aproximaciones, por la necesidad de representar
+operaciones y cantidades matématicas exactas.
+Entre los tipos de errores tenemos a los errores por truncamiento que resultan de 
+las aproximaciones como un procedimiento matemático exacto.
+Los errores por redondeo se producen cuando se usan números que tienen un limite
+de cifras significativas para representar números exáctos.
+Para los dos tipos de errores, el valor del error está dado por:
+
+\[error = Valor_{Exacto} - Valor_{Aproximado}\]\cite{chapra2011metodos}
+
+Donde \(error\) se usa para representar el valor exacto del error. Esta forma de reprsentar el
+valor del error es también llamada \textbf{error verdadero}.
+
+Las diferentes formas de calcular el error:
+
+\begin{itemize}
+    \item {Error absoluto:}
+    \[error_{absoluto} = \left|Valor_{Exacto} - Valor_{Aproximado} \right|\]
+    \item {Error relativo:}
+    \[error_{relativo} = \left|\frac{Valor_{Exacto} - Valor_{Aproximado}}{Valor_{Exacto}} \right|\]
+    \item {Error Porcental:}
+    \[error_{porcentual} = \left|\frac{Valor_{Exacto} - Valor_{Aproximado}}{Valor_{Exacto}} \right| \cdot 100\%\]
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section*{DESARROLLO}
+
+\subsection*{Conjunto de Ejercicios}
+
+\begin{enumerate}
+    \item Calcule los errores absoluto y relativo en las aproximaciones de \(p\) por \(p^{*}\).
+    \begin{enumerate}[label=\alph*.]
+        \item \(p = \pi, p^{*} = \frac{22}{7}\)
+        \[
+        \begin{aligned}
+            error_{absoluto} &= \left| p - p^{*}\right| \\
+                             &= \left| \pi - \frac{22}{7} \right| \\
+                             &= \left|-0.0012644892673496777\right| = 0.0012644892673496777 \\
+                             &\approx 0.00126449
+        \end{aligned}
+        \]
+
+        \[
+        \begin{aligned}
+            error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                             &= \frac{0.00126449}{\pi } \\
+                             &= 0.0004024996679805415 \\
+                             &\approx 0.0004025
+        \end{aligned}
+        \]
+        \item \(p = \pi, p^{*} = 3.1416\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| \pi - 3.1416 \right| \\
+                                 &= \left|-0.000007346410206832132\right| = 0.000007346410206832132 \\
+                                 &\approx 0.00000735
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{0.00000735}{\pi} \\
+                                 &= 0.0000023395776634508616 \\
+                                 &\approx 0.00000234
+            \end{aligned}
+        \]
+        \item \(p = e, p^{*} = 2.718\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| e - 2.718 \right| \\
+                                 &= \left|0.0002818284590451192\right| = 0.0002818284590451192 \\
+                                 &\approx 0.0003
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{0.0003}{e} \\
+                                 &= 0.00011036383235143269\\
+                                 &\approx 0.0001104
+            \end{aligned}
+        \]
+        \item \(p = \sqrt{2}, p^{*} = 1.414\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| \sqrt{2} - 1.414 \right| \\
+                                 &= \left|0.00021356237309522186\right| = 0.00021356237309522186 \\
+                                 &\approx 0.0002136
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{0.0002136}{\sqrt{2}} \\
+                                 &= 0.00015103800846144654\\
+                                 &\approx 0.00015104
+            \end{aligned}
+        \]
+    \end{enumerate}
+    \item Calcule los errores absoluto y relativo en las aproximaciones de \(p\) por \(p^{*}\).
+    \begin{enumerate}[label=\alph*.]
+        \item \(p = e^{10}, p^{*} = 22000\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| e^{10} - 22000 \right| \\
+                                 &= \left|26.465794806703343\right| = 26.465794806703343 \\
+                                 &\approx 26.4658
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{26.4658}{e^{10}} \\
+                                 &= 0.0012015454611079724\\
+                                 &\approx 0.0012015455
+            \end{aligned}
+        \]
+        \item \(p = 10^{\pi}, p^{*} = 1400\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| 10^{\pi} - 1400 \right| \\
+                                 &= \left|-14.544268632989315\right| = 14.544268632989315 \\
+                                 &\approx 14.54427
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{14.54427}{10^{\pi}} \\
+                                 &= 0.010497823691305794\\
+                                 &\approx 0.0105
+            \end{aligned}
+        \]
+        \item \(p = 8!, p^{*} = 39900\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| 8! - 39900 \right| \\
+                                 &= \left|420\right| = 420
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{420}{8!} \\
+                                 &= 0.01041\overline{6}\\
+                                 &\approx 0.01042
+            \end{aligned}
+        \]
+        \item \(p = 9!, p^{*} = \sqrt{18\pi}\left( \frac{9}{e}\right)^{9}\)
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| p - p^{*}\right| \\
+                                 &= \left| 9! - \sqrt{18\pi}\left( \frac{9}{e}\right)^{9} \right| \\
+                                 &= \left|3343.1271580516477\right| \approx 3343.13
+            \end{aligned}
+            \]
+    
+            \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{p - p^{*}}{p}\right| \\
+                                 &= \frac{3343.13}{9!} \\
+                                 &= 0.009212770061728395\approx 0.01
+            \end{aligned}
+        \]
+    \end{enumerate}
+    \item Encuentro el intervalo más largo en el que se debe encontrar \(p^{*}\) para aproximarse a \(p\) con error relativo máximo de \(10^{-4}\) para cada valor de \(p\).
+
+    \[
+    \begin{aligned}
+        error_{relativo} &\leq 10^{-4} \\
+        \left|\frac{p-p^{*}}{p}\right| &\leq 10^{-4} \\
+        \left|p-p^{*}\right| &\leq 10^{-4} \cdot |p| \\
+        p^{*} \in [p-10^{-4}\cdot|p|& ,  p+10^{-4}\cdot|p|]
+    \end{aligned}
+    \]
+    \begin{enumerate}[label=\alph*.]
+        \item \(\pi\)
+        \[
+            \begin{aligned}
+                p &= \pi \\   
+                p^{*} \in [\pi-10^{-4}\cdot \pi& ,  \pi+10^{-4}\cdot\pi] \\
+                p^{*} \in [3.141278494324434& ,  3.141906812855152]
+            \end{aligned}
+        \]
+
+        \item \(e\)
+        \[
+            \begin{aligned}
+                p &= e \\   
+                p^{*} \in [e-10^{-4}\cdot e& ,  e+10^{-4}\cdot e] \\
+                p^{*} \in [2.718010000276199& ,  2.718553656641891]
+            \end{aligned}
+        \]
+        \item \(\sqrt{2}\)
+        \[
+            \begin{aligned}
+                p &= \sqrt{2} \\   
+                p^{*} \in [\sqrt{2}-10^{-4}\cdot \sqrt{2}& ,  \sqrt{2}+10^{-4}\cdot \sqrt{2}] \\
+                p^{*} \in [1.4140721410168577& ,  1.4143549837293325]
+            \end{aligned}
+        \]
+        \item \(\sqrt[3]{7}\)
+        \[
+            \begin{aligned}
+                p &= \sqrt[3]{7} \\   
+                p^{*} \in [\sqrt[3]{7}-10^{-4}\cdot \sqrt[3]{7}& ,  \sqrt[3]{7}+10^{-4}\cdot \sqrt[3]{7}] \\
+                p^{*} \in [1.9127398896541117& ,  1.9131224758906662]
+            \end{aligned}
+        \]
+    \end{enumerate}
+    \item El número \(e\) se puede definir por medio de \(e = \sum_{n = 0}^{\infty} \left( \frac{1}{n!} \right)\), donde \(n! = n(n-1) \dots 2 \cdot 1\) para \(n \neq 0\) y \(0! = 1\). Calcule los errores absoluto y relativo en la siguiente aproximación de \(e\): 
+    \begin{enumerate}[label=\alph*.]
+        \item \(\sum_{n=0}^{5} \left( \frac{1}{n!}\right)\)
+        \[
+        \sum_{n = 0}^{5} \left( \frac{1}{n!}\right) = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \frac{1}{5!} = 2.71\overline{6} \approx 2.72
+        \]
+        \[
+            \begin{aligned}
+                error_{absoluto} &= \left| e - \sum_{n = 0}^{5} \left( \frac{1}{n!}\right)\right| \\
+                                 &= \left| e - 2.72 \right| = |-0.0017181715409551046| \\
+                                 &= 0.0017181715409551046 \approx 0.00172        
+            \end{aligned}
+        \]
+        \[
+            \begin{aligned}
+                error_{relativo} &= \left| \frac{e - \sum_{n = 0}^{5} \left( \frac{1}{n!}\right)}{e}\right| \\
+                                 &= \frac{0.00172}{e} = 0.0006327526388148809 \approx 0.00633        
+            \end{aligned}
+        \]  
+        \item \(\sum_{n=0}^{10} \left( \frac{1}{n!}\right)\)
+        \[
+            \sum_{n = 0}^{10} \left( \frac{1}{n!}\right) = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \frac{1}{5!} + \frac{1}{6!} + \frac{1}{7!} + \frac{1}{8!} + \frac{1}{9!} + \frac{1}{10!} \approx 2.7182818
+            \]
+            \[
+                \begin{aligned}
+                    error_{absoluto} &= \left| e - \sum_{n = 0}^{10} \left( \frac{1}{n!}\right)\right| \\
+                                     &= \left| e - 2.7182818 \right| = |0.000000028459044898454522| \\
+                                     &= 0.000000028459044898454522 \approx 0.00000002846         
+                \end{aligned}
+            \]
+            \[
+                \begin{aligned}
+                    error_{relativo} &= \left| \frac{e - \sum_{n = 0}^{10} \left( \frac{1}{n!}\right)}{e}\right| \\
+                                     &= \frac{0.00000002846}{e} = 0.000000010469848895739249 \approx 0.00000001047        
+                \end{aligned}
+        \]
+    \end{enumerate}
+
+    \item Suponga que dos puntos (\(x_0\),\(y_0\)) y (\(x_1\),\(y_1\)) se encuentran en línea recta con \(y_1 \neq y_0\). Existen dos fórmulas para encontrar la intersección \(x\) de la línea:
+    \[x = \frac{x_0y_1 - x_1y_0}{y_1-y_0} \quad \text{y} \quad x = x_0 - \frac{(x_1-x_0)y_0}{y_1-y_0}\]
+    
+    \begin{enumerate}[label=\alph*.]
+        \item Use los datos \((x_0,y_0) = (1.31, 3.24)\) y \((x_1, y_1) = (1.93, 4.76)\) y la aritmética de redondeo de tres dígitos para calcular la intersección con \(x\) de ambas maneras. ¿Cuál método es mejor y por qué?
+    \end{enumerate}
+    
+    \[
+    \begin{aligned}
+        x_a &= \frac{x_0y_1 - x_1y_0}{y_1-y_0} \\
+          &= \frac{1.31 \cdot 4.76 - 1.93 \cdot 3.24}{4.76 - 3.24} \\
+          &= -0.011578947368421534 \approx -0.0116
+    \end{aligned}
+    \]
+    \[
+    \begin{aligned}
+        x_b &=  x_0 - \frac{(x_1-x_0)y_0}{y_1-y_0}\\
+          &= 1.31 - \frac{(1.93 - 1.31) \cdot 3.24}{4.76 - 3.24} \\
+          &= -0.011578947368421355 \approx -0.0116
+    \end{aligned}
+    \]
+
+    Las dos formulas dan el mismo resultado. Entre las dos la segunda formula \(x_b\) da menos errores ya que no tiene tantas multiplicaciones, lo que la hace mas efectiva.
+\end{enumerate}
+
+\section*{CONCLUCIONES}
+\begin{itemize}
+    \item {Comprender los errores nos ayuda a identificar qué tanto nos estamos acercando al valor real de una operación.}
+    \item {Se comprobó que las formulas que incluyen más multiplicaciones son mas propensas a errores.} 
+\end{itemize}
+
+\section*{RECOMENDACIONES}
+
+Usar error absoluto y relativo para evaluar los resultados, ya que cada uno aporta
+imformación única.
+El absoluto da el valor de la diferencia entre el valor exacto y la aproximación.
+El relativo da una comparación entre el valor del error absoluto y el valor exacto.
+\renewcommand{\refname}{\MakeUppercase{REFERENCIAS}}
+\bibliographystyle{IEEEtran}
+\bibliography{inFiles/References/references.bib}
+
+
+\end{document}

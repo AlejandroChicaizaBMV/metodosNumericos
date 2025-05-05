@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage{parskip}
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\normalfont\MakeUppercase}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\setlength{\cftsecindent}{20pt}
+
+\definecolor{highlight}{RGB}{255, 255, 0}
+
+\geometry{a4paper, margin=1in}
+
+
+\definecolor{highlight}{RGB}{255,255,0}
+\definecolor{azulito}{RGB}{85, 142, 213}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\MakeUppercase}{}{0pt}{}
+
+\addto\captionsspanish{\renewcommand{\contentsname}{Contenido}}
+
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+
+
+\begin{document}
+
+
+\thispagestyle{empty}
+\vspace*{2cm}
+\begin{center}
+    \noindent\rule{\textwidth}{0.4pt}\\[0.5cm]
+    {\Huge\bfseries Plantilla Informes}\\[0.5cm]
+    \noindent\rule{\textwidth}{0.4pt}\\[0.5cm]
+    {\large {\colorbox{white}{[Subtítulo del documento]}}}\\[2cm]
+    \textbf{ASIGNATURA:} \hspace{1cm} {Métodos numéricos}\\[0.2cm]
+    
+    \textbf{INTEGRANTES:} \hspace{1cm} {Sebastián Chicaiza}\\[2cm]
+    
+    \textbf{FECHA DE ENTREGA:} \hspace{0.5cm} \colorbox{highlight}{Fecha}
+\end{center}
+\newpage
+
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section*{Objetivos} \addcontentsline{toc}{section}{OBJETIVOS}
+\begin{itemize}
+    \item \colorbox{highlight}{Al menos uno por tema}
+\end{itemize}
+
+%\newpage
+\section*{Marco Teórico}
+\addcontentsline{toc}{section}{MARCO TEÓRICO}
+
+\section*{Prerrequisitos}
+\addcontentsline{toc}{section}{PRERREQUISITOS}
+
+\section*{Desarrollo}
+\addcontentsline{toc}{section}{DESARROLLO}
+
+\section*{Conclusiones}
+\addcontentsline{toc}{section}{CONCLUSIONES}
+
+\section*{Recomendaciones}
+\addcontentsline{toc}{section}{RECOMENDACIONES}
+
+
+\vspace{0.5cm}
+
+%\newpage
+\renewcommand{\bibname}{\MakeUppercase{REFERENCIAS}}
+\bibliographystyle{IEEEtran}
+\addcontentsline{toc}{section}{REFERENCIAS}
+\bibliography{inFiles/References/references}
+\colorbox{highlight}{en formato IEEE}
+
+\end{document}
