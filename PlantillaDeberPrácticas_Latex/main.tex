@@ -57,8 +57,8 @@
 % Datos principales
 \noindent\textbf{PERÍODO ACADÉMICO:} 2025-A\\[0.2cm]
 \noindent\textbf{ASIGNATURA:} ICCD412 Métodos Numéricos \hfill \textbf{GRUPO:} GR2\\[0.2cm]
-\noindent\textbf{TIPO DE INSTRUMENTO:} Práctica2\\[0.2cm]
-\noindent\textbf{FECHA DE ENTREGA LÍMITE:} {04/05/2025}\\[0.2cm]
+\noindent\textbf{TIPO DE INSTRUMENTO:} Práctica3\\[0.2cm]
+\noindent\textbf{FECHA DE ENTREGA LÍMITE:} {07/05/2025}\\[0.2cm]
 \noindent\textbf{ALUMNO:} {Sebastián Chicaiza}
 
 \vspace{0.5cm}
@@ -70,116 +70,71 @@
 \section*{TEMA}
 
 \begin{center}
-    \Large\textbf{chuuuupaloooo}
+    \Large\textbf{Método de la bisección}
 \end{center}
 \vspace{0.5cm}
 
 \section*{OBJETIVOS}
 \begin{itemize}
-    \item {Comprender el procedimiento para la conversión de números en decimal a formato IEEE 754 de 64 bits.}
-    \item { Analizar el error relativo resultante de la conversión.}
+    \item {Conocer como aplicar el método de la bisección para sacar soluciones aproximadas a ecuaciones no lineales.}
+    \item {Analizar el comportamiento y la presición del método de la bisección.}
 \end{itemize}
 \vspace{0.5cm}
 \section*{MARCO TEÓRICO}
-El estándar IEEE 754 define cómo representar números reales en computadoras usando formatos de punto flotante.
-Los tipos más comunes son float y double. El valor cero no puede representarse en formato normalizado, por lo que se usa un patrón especial de bits en ceros. También existe el -0, pero tanto 0 como -0 se consideran iguales al compararlos\cite{microsoftIEEE754}.
+El método de la bisección es un proceso iterativo que consiste en evaluar una funcion \(f(x)\) en el punto medio \(p\) de un intervalo de interés \((x_1,x_2)\).
+Dependiendo si su ordenada tiene el mismo signo que \(f(p)\) o no, se definirá que punto limite del intervalo tomará el valor \(p\) en la siguiente iteración. 
+Este proceso se repetirá hasta que el intervalo esté dentro de un rango aceptable de error, es decir menor que una toleracia prefijada\cite{mathews2000metodos}.
 
-El número representado en formato IEEE 754 de 64 bits esá dado por:
-\[x = (-1)^{Signo} \cdot (1+Mantisa) \cdot 2^{exponente - 1023}\]\cite{bui1999design}
-\vspace{0.5cm}
+Para aplicar el método de la bisección se utilizan los siguientes teoremas:
+
+\textbf{Teorema del valor intermedio}
+
+Si \(f \in C[a,b]\) y \(K\) es cualquier número entre \(f(a)\) y \(f(b)\), entonces existe un número \(c\) en \((a,b)\) para el cual \(f(c) = K\).
+
+\textbf{Búsqueda de cambio de signo}
+
+Un intervalo \([a,b]\), la función \(f(x)\) toma valores de diferente signo en los extremos.
+\[f(a) \cdot f(b) < 0\]
 
 \section*{DESARROLLO}
 
-Pasar el número \(263.3_{10}\) al formato IEEE 754 de 64 bits, una vez en binario pasarlo a decimal y calcular el error relativo a 3 cifras de redondeo.
+\subsection*{Ejercicios Aplicados}
 
-\subsection*{Transformación a IEE 754}
-Signo positivo (0)
+\begin{enumerate}
+    \item Un abrevadero de longitud \(L\) tiene una sección transversal en forma de semicírculo con radio \(r\). (Consulte la
+    figura adjunta.) Cuando se llena con agua hasta una distancia \(h\) a partir de la parte superior, el volumen \(V\) de
+    agua es
+    \[V = L \left[ 0.5\pi r^{2} - r^{2}\arcsen{\left( \frac{h}{r} \right)} - h(r^{2} - h^{2})^{1/2} \right]\]
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{inFiles/Figures/ej1Biseccion.png} 
+    \end{center}
 
-Conversión a binario:
-    
-    \[
-        \begin{aligned}
-            \frac{263}{2}  = residuo(1) \\
-            \frac{131}{2}  = residuo(1) \\
-            \frac{65}{2}  = residuo(1) \\
-            \frac{32}{2}  = residuo(0) \\
-            \frac{16}{2}  = residuo(0) \\
-            \frac{8}{2}  = residuo(0) \\
-            \frac{4}{2}  = residuo(0) \\
-            \frac{2}{2}  = residuo(0) \\
-            \frac{1}{2}  = residuo(1) \\
-            263_{10} = 100000111_2
-        \end{aligned}
-    \]
+    Suponga que \(L = 10 cm\), \(r = 1 cm \) y \(V = 12.4 cm^{3}\). Encuentre la profundidad del agua en el abrevadero dentro de \(0.01 cm\).
 
-    \[
-        \begin{aligned}
-            0.3 \cdot 2 &= parteEntera(0) \\
-            0.6 \cdot 2 &= parteEntera(1) \\
-            0.2 \cdot 2 &= parteEntera(0) \\
-            0.4 \cdot 2 &= parteEntera(0) \\
-            0.8 \cdot 2 &= parteEntera(1) \\
-            0.6 \cdot 2 &= parteEntera(1) \quad Se\quad repite\\
-            0.3_{10} &= 0.0\overline{1001}_2
-        \end{aligned}
-    \]
+    \item Un objeto que cae verticalmente a través del aire está sujeto a una resistencia viscosa, así como a la fuerza
+    de gravedad. Suponga que un objeto con masa \(m\) cae desde una altura \(s_0\) y que la altura del objeto después
+    de \(t\) segundos es
+    \[s(t) = s_0 - \frac{mg}{k}t + \frac{m^{2}g}{k^{2}} \left( 1- e^{-kt/m}\right)\],
+    donde \(g = 9.81 m/s^{2}\) y \(k\) representa el coeficiente de la resistencia del aire en \(\frac{Ns}{m}\). Suponga \(s_0 = 300m\),
+    \(m = 0.25 kg\) y \(k = 0.1 \frac{Ns}{m}\). Encuentre, dentro de \(0.01 segundos\), el tiempo que tarda un cuarto de \(kg\) en golpear el piso. 
+\end{enumerate}
 
-\[ 263.3_{10} = 100000111.0\overline{1001}_2\]
+\subsection*{Ejercicios Teóricos}
 
-Mantisa normalizada:
-\[100000111.0\overline{1001}_2 = 1.000001110\overline{1001}_2 \cdot 2^{8}\]
+\begin{enumerate}       
+    \item Use el teorema 2.1 para encontrar una cota para el número de iteraciones necesarias para lograr una
+    aproximación con precisión de \(10^{-4}\) para la solución de \(x^{3} -x -1 = 0\) que se encuentra dentro del intervalo
+    \([1, 2]\). Encuentre una aproximación para la raíz con este grado de precisión.
 
-Mantisa:
-\[Mantisa = 000001110\overline{1001}_2\]
-Exponente: 
-\[Exponente_{Sesgado} = 1023 + exponenteReal\]
-\[Exponente_{Sesgado} = 1023 + 8 = 1031\]
+    \item La función definidapor \(f(x) = \sin{\pi} x\) tiene ceros en cada entero. Muestre cuando \(-1 < a< 0\) y \(2 < b< 3\),
+    el método de bisección converge a
 
-Conversión del Exponente:
-
-\[
-    \begin{aligned}
-        \frac{1031}{2}  = residuo(1) \\
-        \frac{515}{2}  = residuo(1) \\
-        \frac{257}{2}  = residuo(1) \\
-        \frac{128}{2}  = residuo(0) \\
-        \frac{64}{2}  = residuo(0) \\
-        \frac{32}{2}  = residuo(0) \\
-        \frac{16}{2}  = residuo(0) \\
-        \frac{8}{2}  = residuo(0) \\
-        \frac{4}{2}  = residuo(0) \\
-        \frac{2}{2}  = residuo(0) \\
-        \frac{1}{2}  = residuo(1) \\
-        1031_{10} = 10000000111_2
-    \end{aligned}
-\]
-
-Exponente en 11 bits:
-\[Exponente = 10000000111_2\]
-
-\begin{center}
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Signo} & \textbf{Exponente (11 bits)} & \textbf{Mantisa (52 bits)} \\ \hline
-    0 & 10000000111 & 0000011101001100110011001100110011001100110011001100 \\ \hline
-    \end{tabular}
-\end{center}
-
-\subsection*{Transformación a decimal}
-
-\[x = (-1)^{Signo} \cdot (1+Mantisa) \cdot 2^{exponente - 1023}\]
-\[x = (-1)^{0} \cdot (1+0.028515338897705078) \cdot 2^{1031 - 1023}\]
-\[x = 263.2999267578125 \]
-
-\subsection*{Cálculo de error relativo}
-\[p = 263.3 \quad \text{y} \quad p^{*} = 263.2999267578125\]
-\[
-\begin{aligned}
-    error_{relativo} &= \left| \frac{p - p^{*}}{p} \right|\\
-                     &= \left| \frac{263.3 - 263.2999267578125}{263.3} \right|\\
-                     &= 0.000000278170100688829 \approx 0.278 \cdot 10^{-6}
-\end{aligned}
-\]  
+    \begin{enumerate}[label=\alph*.]
+        \item \(0, si \quad a+b<2\)
+        \item \(2, si \quad a+b>2\)
+        \item \(1, si \quad a+b=2\)
+    \end{enumerate}
+\end{enumerate}     
 \section*{CONCLUCIONES}
 \begin{itemize}
     \item {La conversion a formato IEEE 754 de 64 bits permite representar una gran cantidad de valores con alta presición.}
