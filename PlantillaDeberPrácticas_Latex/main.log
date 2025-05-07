@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  6 MAY 2025 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  6 MAY 2025 21:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -400,9 +400,18 @@ Package pdftex.def Info: inFiles/Figures/ej1Biseccion.png  used on input line 10
 (pdftex.def)             Requested size: 407.66833pt x 114.02983pt.
 
 
-[2 <./inFiles/Figures/ej1Biseccion.png>] (main.bbl)
+[2 <./inFiles/Figures/ej1Biseccion.png>]
+Overfull \hbox (14.20879pt too wide) in paragraph at lines 153--170
+ [] 
+ []
 
-[3] (main.aux
+
+
+[3]
+
+[4] (main.bbl)
+
+[5] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -412,17 +421,17 @@ L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7558 strings out of 469959
- 118545 string characters out of 5469834
- 719822 words of memory out of 5000000
- 34272 multiletter control sequences out of 15000+600000
+ 7567 strings out of 469959
+ 118739 string characters out of 5469834
+ 739822 words of memory out of 5000000
+ 34281 multiletter control sequences out of 15000+600000
  632100 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,66p,1208b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,66p,1208b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (3 pages, 348559 bytes).
+Output written on main.pdf (5 pages, 358431 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

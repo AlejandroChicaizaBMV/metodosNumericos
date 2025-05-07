@@ -2,7 +2,7 @@ import math
 
 def evaluar(x):
     #Función con la que se aplicará el método de bisección
-    return redondear(((x+2)*(x+1)**2) * x * ((x-1)**3) * (x-2))
+    return redondear(math.sin(math.pi*x))
 
 def redondear(numero):
     return round(numero, 6)
@@ -40,6 +40,6 @@ limiteSuperior = float(input(f"Interalo desde {limiteInferior}, (Hasta): "))
 numeroIteraciones = int(input("Numero de iteraciones: "))
 print(f"Intervalo seleccionado:[{limiteInferior}, {limiteSuperior}]")
 
-tolerancia = 10**(-5)
+tolerancia = 10**(-4)
 
 algoritmoClase(limiteInferior, limiteSuperior, tolerancia, numeroIteraciones)
