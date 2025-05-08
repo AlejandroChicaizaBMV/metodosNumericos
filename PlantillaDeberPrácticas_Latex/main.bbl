@@ -21,8 +21,7 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{mathews2000metodos}
-J.~Mathews and K.~Fink, \emph{M{\'e}todos Num{\'e}ricos}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Madrid: Prentice Hall, 2000.
+\bibitem{vadilloecuaciones}
+F.~Vadillo, ``Ecuaciones no lineales.''
 
 \end{thebibliography}
