@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  breaklines=true,
+  showstringspaces=false
+}
+
+
+\definecolor{highlight}{RGB}{255, 255, 0}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% Logos
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/epnLogo.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{inFiles/Figures/FIS_logo.jpg}
+\end{minipage}
+
+\vspace{0.5cm}
+
+% Títulos principales
+\begin{center}
+    \textbf{ESCUELA POLITÉCNICA NACIONAL}\\[0.2cm]
+    \textbf{FACULTAD DE INGENIERÍA DE SISTEMAS}\\[0.2cm]
+    \textbf{INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN}
+\end{center}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+
+% Datos principales
+\noindent\textbf{PERÍODO ACADÉMICO:} 2025-A\\[0.2cm]
+\noindent\textbf{ASIGNATURA:} ICCD412 Métodos Numéricos \hfill \textbf{GRUPO:} GR2\\[0.2cm]
+\noindent\textbf{TIPO DE INSTRUMENTO:} Tarea6\\[0.2cm]
+\noindent\textbf{FECHA DE ENTREGA LÍMITE:} {09/05/2025}\\[0.2cm]
+\noindent\textbf{ALUMNO:} {Sebastián Chicaiza}
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+% Secciones
+\section*{TEMA}
+
+\begin{center}
+    \Large\textbf{Método de la secante}
+\end{center}
+\vspace{0.5cm}
+
+\section*{OBJETIVOS}
+\begin{itemize}
+    \item {Aplicar los métodos de la secante y Newton-Rahson para encontrar valores aproximados a la raíz de una función no lineal.}
+    \item {Comparar la presición y convergencia de los dos métodos aplicados.}
+\end{itemize}
+\vspace{0.5cm}
+\section*{MARCO TEÓRICO}
+En el método de la secante en lugar de obtener una sucesión de intervalos se
+calcula una sucesión de números que aproximan el cero de la función
+
+Se comienza con dos aproximaciones \(p_0\) y \(p_1\) a la raíz que se está buscando.
+Primero se construyen las rectas secantes que pasan por los puntos \(p_0, f(p_0)\), \(p_1, f(p_1)\) y se calcula su corte con el eje X
+y este corte lo llamaremos \(p_2\), después se evalúa \(f(p_2)\). El proceso se repetirá con \(p_1\) y \(p_2\) para calcular \(p_3\) y así sucesivamente \(p_4, p_5, \dots\, x_n\)\cite{vadilloecuaciones}.
+
+\(p_n\) puede ser exprezado de la siguiente forma:
+\[p_n = p_{n-1} - f(p_{n-1}) \cdot \frac{p_{n-1} - p_{n-2}}{f(p_{n-1})- f(p_{n-2})}\]
+
+\section*{DESARROLLO}
+Use el método de la secante para encontrar una solución para \(x = \cos{(x)}(f(x) = \cos{(x)} -x = 0)\) con
+tolerancia tal que:
+\[|p_n - p_{n-1}| < (tolerancia = 10^{-16})\]
+y compare las aproximaciones con las determinadas en el ejemplo visto en clase, el cual aplica el método
+de Newton, resuelva hasta llegar a la misma tolerancia para este método también.
+
+Suponga que usamos \(p_0 = 0.5 \) y \(p_1 = \frac{\pi}{4} \), trabaje con 13 cifras decimales de redondeo. 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(p_0\) & \(p_1\) & \(p_n\) & \(f(p_0)\) \\ 
+\hline
+0.5 & 0.7853981633974 & 0.7363841388366 & 0.3775825618904 \\
+0.7853981633974 & 0.7363841388366 & 0.7390581392139 & -0.0782913822108 \\
+0.7363841388366 & 0.7390581392139 & 0.7390851493372 & 0.0045177185221  \\
+0.7390581392139 & 0.7390851493372 & 0.7390851332151 & 0.0000451772159e  \\
+0.7390851493372 & 0.7390851332151 & 0.7390851332152 & -0.000000026982  \\
+0.7390851332151 & 0.7390851332152 & 0.7390851332152 & 0.0000000000001 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \(f(p_1)\) & \(f(p_n)\) & \textbf{TOL} \\ 
+    \hline
+    -0.0782913822108 & 0.0045177185221 & 0.0490140245608 \\
+    0.0045177185221 & 0.0000451772159 & 0.0026740003773 \\
+    0.0000451772159& -0.000000026982 & 0.0000270101233 \\
+    -0.000000026982 & 0.0000000000001 & 0.000000000000161221  \\
+    0.0000000000001 & -0.0000000000001 & 0.00000000000001 \\
+    -0.0000000000001 & -0.0000000000001 & 0.0 \\
+    \hline
+    \end{tabular}
+\end{center}
+\(Raiz aproximada \approx 0.7390851332152 \)
+    
+Resultados obtenidos con el método de Newton-Raphson:
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \(p_{n-1}\) & \(p_n\) & \(f(p_{n-1})\) & \(f^{'}(p_{n-1})\) & \textbf{TOL}  \\
+    \hline
+    0.5 & 0.7552224171057 & 0.3775825618904 & -1.4794255386042 &  0.2552224171057 \\
+    0.7552224171057 & 0.7391416661499 & -0.0271033118576 & -1.6854506317545 &  0.0160807509558 \\
+    0.7391416661499 & 0.7390851339208 & -0.0000946153806 & -1.6736538107584 &  0.0000565322291 \\
+    0.7390851339208 & 0.7390851332151 & -0.0000000011810 & -1.6736120297047 &  0.0000000007057 \\
+    0.7390851332151 & 0.7390851332152 & 0.0000000000001 & -1.6736120291832 &  0.0000000000001 \\
+    0.7390851332152 & 0.7390851332151 & 0 & -1.6736120291832 &  0.0000000000001 \\
+    0.7390851332151 & 0.7390851332152 & 1 & -1.6736120291832 &  0.0000000000001 \\
+    0.7390851332152 & 0.7390851332151 & 0 & -1.6736120291832 &  0.0000000000001 \\
+    0.7390851332151 & 0.7390851332152 & 1 & -1.6736120291832 &  0.0000000000001 \\
+    0.7390851332152 & 0.7390851332151 & 0 & -1.6736120291832 &  0.0000000000001 \\
+    \hline        
+    \end{tabular}
+\end{center}
+
+\(Raiz aproximada \approx 0.7390851332151 \)
+\section*{CONCLUSIONES}
+\begin{itemize}
+    \item {los resultados 0.7390851332152 secante y 0.7390851332151 Newton-Raphson demuestra la alta precisión de ambas técnicas para esta función en particular.}
+    \item {El método de Newton-Raphson suele tener una tasa de convergencia más rápida, sin embargo se ve limitada al tener que usar derivadas, lo que implica una serie de pasos extras.} 
+\end{itemize}
+
+\section*{RECOMENDACIONES}
+
+\begin{itemize}
+    \item Usar librerias como sympy para representar derivadas.
+\end{itemize}
+
+\renewcommand{\refname}{\MakeUppercase{REFERENCIAS}}
+\bibliographystyle{IEEEtran}
+\bibliography{inFiles/References/references.bib}
+
+
+\end{document}

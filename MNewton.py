@@ -8,7 +8,8 @@ def evaluar_funciones(x_valor):
     return valor_f, valor_f_derivada
 
 def redondear(numero):
-    return round(numero, 13)
+    return round(numero, 8)
+
 
 def algoritmoClase(p0, tolerancia, numeroIteraciones):
     #paso 1
@@ -40,11 +41,11 @@ p0 = float(input("primera raiz (p0):"))
 numeroIteraciones = int(input("Numero de iteraciones: "))
 print(f"p0 = [{p0}]")
 
-tolerancia = 10**(-16)
+tolerancia = 10**(-5)
 
 x = sp.Symbol('x')
 
-f = sp.cos(x) - x
+f = x**4 -x -1
 
 f_derivada = sp.diff(f, x)
 

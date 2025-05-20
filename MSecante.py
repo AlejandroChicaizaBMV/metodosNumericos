@@ -2,16 +2,16 @@ import math
 
 def evaluar(x):
     #Función con la que se aplicará el método de la secante
-    return redondear(math.cos(x) - x)
+    return  redondear(x**4 -x -1)
 
 def redondear(numero):
-    return round(numero, 13)
+    return round(numero, 8)
 
 def algoritmoClase(p0, p1, tolerancia, numeroIteraciones):
     #paso 1
     i = 2
-    q0 = redondear(evaluar(p0))
-    q1 = redondear(evaluar(p1))
+    q0 = evaluar(p0)
+    q1 = evaluar(p1)
     #paso 2
     while i <= numeroIteraciones:
         #paso 3
@@ -36,10 +36,10 @@ def algoritmoClase(p0, p1, tolerancia, numeroIteraciones):
 
 
 p0 = float(input("primera raiz (p0):"))
-p1 = redondear(math.pi / 4)#float(input(f"p0 = {p0}, p1: "))
+p1 = float(input(f"p0 = {p0}, p1: "))
 numeroIteraciones = int(input("Numero de iteraciones: "))
 print(f"(p0,p1) = [{p0}, {p1}]")
 
-tolerancia = 10**(-16)
+tolerancia = 10**(-5)
 
 algoritmoClase(p0, p1, tolerancia, numeroIteraciones)

@@ -21,7 +21,9 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{vadilloecuaciones}
-F.~Vadillo, ``Ecuaciones no lineales.''
+\bibitem{chapra2011metodos}
+S.~C. Chapra, R.~P. Canale, R.~S.~G. Ruiz, V.~H.~I. Mercado, E.~M. D{\'\i}az,
+  and G.~E. Benites, \emph{M{\'e}todos num{\'e}ricos para ingenieros}.\hskip
+  1em plus 0.5em minus 0.4em\relax McGraw-Hill New York, NY, USA, 2011, vol.~5.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  8 MAY 2025 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  11 MAY 2025 21:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -393,15 +393,103 @@ Package pdftex.def Info: inFiles/Figures/FIS_logo.jpg  used on input line 41.
 [1
 
 {C:/Users/aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./inFiles/Figures/epnLogo.jpg> <./inFiles/Figures/FIS_logo.jpg>]
-Overfull \hbox (42.43044pt too wide) in paragraph at lines 138--154
+
+[2]
+
+[3]
+Overfull \hbox (8.72546pt too wide) in paragraph at lines 234--249
  [] 
  []
 
 
 
-[2] (main.bbl)
+[4]
 
-[3] (main.aux
+[5]
+Overfull \hbox (42.44756pt too wide) in paragraph at lines 393--403
+ [] 
+ []
+
+
+
+[6]
+Overfull \hbox (77.69719pt too wide) in paragraph at lines 406--423
+ [] 
+ []
+
+
+Overfull \hbox (48.3225pt too wide) in paragraph at lines 429--440
+ [] 
+ []
+
+
+
+[7]
+Overfull \hbox (4.80884pt too wide) in paragraph at lines 500--516
+ [] 
+ []
+
+
+
+[8]
+Overfull \hbox (67.47485pt too wide) in paragraph at lines 541--557
+ [] 
+ []
+
+
+Overfull \hbox (57.68329pt too wide) in paragraph at lines 568--594
+ [] 
+ []
+
+
+
+[9]
+Overfull \hbox (70.53123pt too wide) in paragraph at lines 601--626
+ [] 
+ []
+
+
+Overfull \hbox (67.90562pt too wide) in paragraph at lines 631--656
+ [] 
+ []
+
+
+
+[10]
+Overfull \hbox (67.90562pt too wide) in paragraph at lines 662--687
+ [] 
+ []
+
+
+Overfull \hbox (67.90562pt too wide) in paragraph at lines 694--719
+ [] 
+ []
+
+
+
+[11]
+Overfull \hbox (98.80786pt too wide) in paragraph at lines 750--776
+ [] 
+ []
+
+
+
+[12]
+<inFiles/Figures/divergencia.png, id=50, 928.6695pt x 404.712pt>
+File: inFiles/Figures/divergencia.png Graphic file (type png)
+<use inFiles/Figures/divergencia.png>
+Package pdftex.def Info: inFiles/Figures/divergencia.png  used on input line 803.
+(pdftex.def)             Requested size: 407.66833pt x 177.66008pt.
+
+Overfull \hbox (9.92482pt too wide) in paragraph at lines 803--804
+ [] 
+ []
+
+
+
+[13] (main.bbl)
+
+[14 <./inFiles/Figures/divergencia.png>] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -411,17 +499,17 @@ L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7535 strings out of 469959
- 118014 string characters out of 5469834
- 727822 words of memory out of 5000000
- 34250 multiletter control sequences out of 15000+600000
- 631148 words of font info for 55 fonts, out of 8000000 for 9000
+ 7557 strings out of 469959
+ 118576 string characters out of 5469834
+ 764822 words of memory out of 5000000
+ 34271 multiletter control sequences out of 15000+600000
+ 632100 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,66p,1208b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (3 pages, 108316 bytes).
+ 57i,9n,66p,1208b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (14 pages, 290135 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
