@@ -1,8 +1,8 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{OBJETIVOS}{1}{}%
 \contentsline {section}{MARCO TEÓRICO}{1}{}%
-\contentsline {section}{PRERREQUISITOS}{1}{}%
-\contentsline {section}{DESARROLLO}{1}{}%
-\contentsline {section}{CONCLUSIONES}{1}{}%
-\contentsline {section}{RECOMENDACIONES}{1}{}%
-\contentsline {section}{REFERENCIAS}{1}{}%
+\contentsline {section}{PRERREQUISITOS}{2}{}%
+\contentsline {section}{DESARROLLO}{2}{}%
+\contentsline {section}{CONCLUSIONES}{2}{}%
+\contentsline {section}{RECOMENDACIONES}{2}{}%
+\contentsline {section}{REFERENCIAS}{2}{}%

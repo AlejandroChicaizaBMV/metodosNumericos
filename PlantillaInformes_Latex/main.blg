@@ -4,7 +4,6 @@ The top-level auxiliary file: main.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: IEEEtran.bst
 Reallocating 'name_of_file' (item size: 1) to 30 items.
-I found no \citation commands---while reading file main.aux
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
@@ -14,47 +13,50 @@ Database file #1: inFiles/References/references.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in rojas2002guia
+Warning--empty journal in usechesistema
+Warning--empty year in usechesistema
 
 Done.
-You've used 0 entries,
+You've used 3 entries,
             4087 wiz_defined-function locations,
-            821 strings with 7306 characters,
-and the built_in function-call counts, 104 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 19
-:= -- 27
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            835 strings with 7914 characters,
+and the built_in function-call counts, 1348 in all, are:
+= -- 80
+> -- 41
+< -- 1
++ -- 20
+- -- 10
+* -- 76
+:= -- 230
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 3
+cite$ -- 6
+duplicate$ -- 108
+empty$ -- 123
+format.name$ -- 13
+if$ -- 282
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 23
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 3
+missing$ -- 23
+newline$ -- 32
+num.names$ -- 3
+pop$ -- 69
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1
+skip$ -- 91
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 2
+swap$ -- 59
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 22
-(There was 1 error message)
+type$ -- 3
+warning$ -- 3
+while$ -- 3
+width$ -- 4
+write$ -- 43
+(There were 3 warnings)

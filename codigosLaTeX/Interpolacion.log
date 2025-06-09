@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  1 JUN 2025 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.22)  31 MAY 2025 23:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -302,22 +302,6 @@ LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 8.
-
-
-LaTeX Warning: Label `fig:etiqueta' multiply defined.
-
-
-LaTeX Warning: Label `fig:etiqueta' multiply defined.
-
-
-LaTeX Warning: Label `fig:etiqueta' multiply defined.
-
-
-LaTeX Warning: Label `fig:etiqueta' multiply defined.
-
-
-LaTeX Warning: Label `fig:etiqueta' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -411,56 +395,145 @@ Package pdftex.def Info: inFiles/Figures/FIS_logo.jpg  used on input line 41.
 {C:/Users/aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./inFiles/Figures/epnLogo.jpg> <./inFiles/Figures/FIS_logo.jpg>]
 
 [2]
-<inFiles/Figures/ecuacion1_1.jpeg, id=17, 1145.27875pt x 1606.0pt>
-File: inFiles/Figures/ecuacion1_1.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion1_1.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion1_1.jpeg  used on input line 205.
-(pdftex.def)             Requested size: 226.48395pt x 317.592pt.
-<inFiles/Figures/ecuacion1_2.jpeg, id=18, 902.37125pt x 1286.8075pt>
-File: inFiles/Figures/ecuacion1_2.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion1_2.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion1_2.jpeg  used on input line 210.
-(pdftex.def)             Requested size: 226.48395pt x 322.95773pt.
-<inFiles/Figures/ecuacion1_3.jpeg, id=19, 921.4425pt x 1308.89pt>
-File: inFiles/Figures/ecuacion1_3.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion1_3.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion1_3.jpeg  used on input line 215.
-(pdftex.def)             Requested size: 226.48395pt x 321.70941pt.
+Overfull \hbox (37.8223pt too wide) detected at line 141
+[][]
+ []
+
+
+Overfull \hbox (5.45016pt too wide) detected at line 146
+\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = 2[]31977 + 1[]25338(\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + 1) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 3\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1)
+ []
+
+
+Overfull \hbox (0.65018pt too wide) detected at line 147
+\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = 2[]31977 + 1[]25338(\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 0[]63741(\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + 1) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 0[]57922(\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 3\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1)
+ []
+
+
+Overfull \hbox (25.54056pt too wide) detected at line 161
+[][]
+ []
+
+
+Overfull \hbox (43.39868pt too wide) detected at line 170
+[][]
+ []
+
 
 
 [3]
-
-[4 <./inFiles/Figures/ecuacion1_1.jpeg> <./inFiles/Figures/ecuacion1_2.jpeg>]
-<inFiles/Figures/ecuacion2_1.jpeg, id=27, 1131.22626pt x 1606.0pt>
-File: inFiles/Figures/ecuacion2_1.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion2_1.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion2_1.jpeg  used on input line 301.
-(pdftex.def)             Requested size: 226.48395pt x 321.53738pt.
-<inFiles/Figures/ecuacion2_2.jpeg, id=28, 1138.2525pt x 1606.0pt>
-File: inFiles/Figures/ecuacion2_2.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion2_2.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion2_2.jpeg  used on input line 306.
-(pdftex.def)             Requested size: 226.48395pt x 319.55244pt.
-<inFiles/Figures/ecuacion2_3.jpeg, id=29, 1142.2675pt x 1606.0pt>
-File: inFiles/Figures/ecuacion2_3.jpeg Graphic file (type jpg)
-<use inFiles/Figures/ecuacion2_3.jpeg>
-Package pdftex.def Info: inFiles/Figures/ecuacion2_3.jpeg  used on input line 311.
-(pdftex.def)             Requested size: 226.48395pt x 318.42519pt.
+Overfull \hbox (58.06612pt too wide) detected at line 179
+[][]
+ []
 
 
-[5 <./inFiles/Figures/ecuacion1_3.jpeg>]
 
-[6 <./inFiles/Figures/ecuacion2_1.jpeg> <./inFiles/Figures/ecuacion2_2.jpeg>]
+[4]
+Overfull \hbox (58.73653pt too wide) detected at line 223
+[][]
+ []
 
-[7 <./inFiles/Figures/ecuacion2_3.jpeg>]
+
+Overfull \hbox (53.48576pt too wide) detected at line 241
+[][]
+ []
+
+
+
+[5]
+Overfull \hbox (57.73381pt too wide) detected at line 296
+[][]
+ []
+
+
+Overfull \hbox (58.06612pt too wide) detected at line 304
+[][]
+ []
+
+
+
+[6]
+Overfull \hbox (59.1298pt too wide) detected at line 346
+[][]
+ []
+
+
+Overfull \hbox (54.32982pt too wide) detected at line 353
+[][]
+ []
+
+
+Overfull \hbox (67.08081pt too wide) detected at line 367
+[][]
+ []
+
+
+Overfull \hbox (58.06612pt too wide) detected at line 376
+[][]
+ []
+
+
+
+[7]
+Overfull \hbox (32.78185pt too wide) detected at line 394
+[][]
+ []
+
+
+Overfull \hbox (25.8126pt too wide) detected at line 414
+[][]
+ []
+
+
+Overfull \hbox (2.61076pt too wide) in paragraph at lines 433--434
+[]\OT1/cmr/m/n/12 Construimos esl t^^Sermino re-si-dual $\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ (de-bi-do al es-pa-cio que ocu-pa $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^X\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ))$)
+ []
+
+
 
 [8]
+Overfull \hbox (41.83366pt too wide) detected at line 446
+[][]
+ []
+
+
 
 [9]
+Overfull \hbox (60.05807pt too wide) detected at line 531
+[][]
+ []
+
+
 
 [10]
+Overfull \hbox (85.518pt too wide) detected at line 578
+\OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 0[]0401 \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 0[]31047 \OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 0[]82277 \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 0[]89986 \OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 0[]85289 \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 0[]93485 \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 0[]87464 \OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + 1[]01571
+ []
 
-[11] (main.aux
+
+
+[11]
+Overfull \hbox (24.22914pt too wide) detected at line 617
+[][]
+ []
+
+
+Overfull \hbox (42.22545pt too wide) detected at line 650
+[][]
+ []
+
+
+
+[12]
+Overfull \hbox (66.61429pt too wide) detected at line 683
+[][]
+ []
+
+
+
+[13] (main.bbl)
+
+[14] (main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -468,23 +541,19 @@ LaTeX Info: Redefining \% on input line 8.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 7567 strings out of 469959
- 119520 string characters out of 5469834
+ 7547 strings out of 469959
+ 118248 string characters out of 5469834
  731822 words of memory out of 5000000
- 34284 multiletter control sequences out of 15000+600000
+ 34261 multiletter control sequences out of 15000+600000
  631495 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1208b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (11 pages, 867314 bytes).
+ 57i,12n,66p,1208b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aleja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (14 pages, 164414 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
